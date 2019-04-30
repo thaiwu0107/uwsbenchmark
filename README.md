@@ -10,3 +10,10 @@
 - websocket 只用一條連線
 ![](./1556613638644.png)<br>
 
+## one nodejs instance
+
+![](./1556613638644.png)<br>
+
+## use pm2 12 nodejs instance
+
+![](./1556613638644.png)<br>
