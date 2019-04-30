@@ -4,10 +4,7 @@ const uWS = require('uWebSockets.js/uws.js');
 const BufferPlus = require('buffer-plus');
 
 Promise.resolve().then(() => {
-  return uWS.App({
-    cert_file_name: path.resolve('./data/dev-cert.pem'),
-    key_file_name: path.resolve('./data/dev-key.pem'),
-  });
+  return uWS.App();
 }).then((wss) => {
   wss.ws('/*', {
     compression: 0,

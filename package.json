@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run ws && npm run w3c",
-    "ws": "node ./server.js & node ./test.js",
-    "w3c": "node ./server.js & node ./wspromised.js"
+    "ws": "node ./wsserver.js & node ./test.js",
+    "w3c": "node ./wsserver.js & node ./wspromised.js"
   },
   "author": "",
   "license": "ISC",
