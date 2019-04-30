@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run ws && npm run w3c",
+    "test": "npm run ws && npm run w3c && npm run httptest",
     "ws": "node ./wsserver.js & node ./test.js",
-    "w3c": "node ./wsserver.js & node ./wspromised.js"
+    "w3c": "node ./wsserver.js & node ./wspromised.js",
+    "httptest": "node ./httpserver.js & npx autocannon -c 20 -p 50 -d 10 http://localhost:9900/f"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autocannon": "^3.2.1",
     "buffer-plus": "^1.0.9",
-    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.10.0",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#binaries",
     "websocket": "^1.0.28",
     "websocket-as-promised": "^0.9.0",
     "ws": "^6.2.1"
